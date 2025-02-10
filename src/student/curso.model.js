@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+//Requisitos que se deben cumplir
 const CursoSchema = new mongoose.Schema({
     nameCurso:{
         type: String,

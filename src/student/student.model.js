@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 
+//Requisitos que se deben cumplir
 const studentSchema = Schema({
     name: {
         type: String,

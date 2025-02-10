@@ -3,10 +3,13 @@ import { assignCurso, getCursos, editarProfile, createCurso, getCursoss } from "
 
 const router = express.Router();
 
+//url para asignar un estudiante al curso
 router.post("/assign-curso/:studentId/:cursoId", assignCurso)
 
+//url para listar loe cursos
 router.get("/cursos", getCursos)
 
+//url para actuaicar el perfil
 router.patch("/:uid/edit-profile", editarProfile)
 
 router.post("/", createCurso)
