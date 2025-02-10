@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "a64634ad-dc36-48ac-82fe-b84213c46172",
+		"name": "Ejecuciones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41829725"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "AgregarStudent",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Saul\",\r\n  \"surname\": \"Ramíre\",\r\n  \"email\": \"sofiaramirez@example.com\",\r\n  \"grade\": \"Quinto\",\r\n  \"password\": \"Sofia$2025\",\r\n  \"role\": \"STUDENT_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/registro/regiterstudent",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"registro",
+								"regiterstudent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarTecher",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Esmeralda\",\r\n  \"surname\": \"salazar\",\r\n  \"email\": \"sala45@gamil.com\",\r\n  \"grade\": \"Tercero\",\r\n  \"password\": \"kks.df235$4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/registro/regiterTeacher",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"registro",
+								"regiterTeacher"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "ListarStudent",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/student/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"student",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarStudent",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/student/deleteStudent/67a90c6d80ff04887b2fec59",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"student",
+								"deleteStudent",
+								"67a90c6d80ff04887b2fec59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarContraseña",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\": \"sdjskrjatje345$#kyetk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/student/updatePassword/67a9744cc8324f3c1809c557",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"student",
+								"updatePassword",
+								"67a9744cc8324f3c1809c557"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarStudent",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/student/findStudent/67a9744cc8324f3c1809c557",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"student",
+								"findStudent",
+								"67a9744cc8324f3c1809c557"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "ListarTeacher",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/teacher",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProfesor",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/teacher/deleteTeacher/67a97f3ca94a78aed7fe2278",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"teacher",
+								"deleteTeacher",
+								"67a97f3ca94a78aed7fe2278"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarContraseña",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\": \"hsef$ges5.545\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/teacher//updatePasswords/67a9815aa40e147adf1c22e8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"teacher",
+								"",
+								"updatePasswords",
+								"67a9815aa40e147adf1c22e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTeacher",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/teacher/findteacher/67a9815aa40e147adf1c22e8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"teacher",
+								"findteacher",
+								"67a9815aa40e147adf1c22e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Curso",
+			"item": [
+				{
+					"name": "AgregarCurso",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameCurso\": \"Ingles\",\r\n    \"descripcionCurso\": \"Exelente clase\",\r\n    \"teacher\": \"67a90ca980ff04887b2fec5d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/curso",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"curso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarCursos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nameCurso\": \"Matemáticas Avanzadas\",\r\n  \"descripcionCurso\": \"Curso avanzado de matemáticas.\",\r\n  \"teacher\": [\"67a90ca980ff04887b2fec5d\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/curso/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"curso",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPerfil_Student",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Harlin\",\r\n    \"email\": \"migu233@gmail.com\",\r\n    \"grade\": \"sexto perito\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/curso/67a90c6d80ff04887b2fec59/edit-profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"curso",
+								"67a90c6d80ff04887b2fec59",
+								"edit-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AsignarCurso",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestor/v1/curso/assign-curso/67a90c6d80ff04887b2fec59/67a9525db76268ed3e308daf",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestor",
+								"v1",
+								"curso",
+								"assign-curso",
+								"67a90c6d80ff04887b2fec59",
+								"67a9525db76268ed3e308daf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
